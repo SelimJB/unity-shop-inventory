@@ -1,15 +1,17 @@
+using MyGame.Inventory;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MyGame.Item
+namespace MyGame.Core
 {
 	// TODO: Split controller logic and visual state management into separate components
 	public class MenuNavigationController : MonoBehaviour
 	{
 		[SerializeField] private Button inventoryButton;
 		[SerializeField] private Button shopButton;
-		[SerializeField] private CanvasGroup inventoryMenu;
-		[SerializeField] private CanvasGroup shopMenu;
+		[SerializeField] private CanvasGroup inventoryCanvasGroup;
+		[SerializeField] private CanvasGroup shopCanvasGroup;
+		[SerializeField] private InventoryMenu inventoryMenu;
 
 		private Color selectedColor;
 		private Color normalColor;
@@ -31,22 +33,24 @@ namespace MyGame.Item
 
 		private void OpenInventory()
 		{
-			ShowMenu(inventoryMenu);
-			HideMenu(shopMenu);
+			ShowMenu(inventoryCanvasGroup);
+			HideMenu(shopCanvasGroup);
+			inventoryMenu.RefreshItems();
 		}
 
 		private void OpenShop()
 		{
-			ShowMenu(shopMenu);
-			HideMenu(inventoryMenu);
+			ShowMenu(shopCanvasGroup);
+			HideMenu(inventoryCanvasGroup);
 		}
 
+		// TODO: Create MenuView class to handle visual state management
 		private void ShowMenu(CanvasGroup menu)
 		{
 			SetMenuVisibility(menu, true);
 
-			SetButtonSelected(inventoryButton, menu == inventoryMenu);
-			SetButtonSelected(shopButton, menu == shopMenu);
+			SetButtonSelected(inventoryButton, menu == inventoryCanvasGroup);
+			SetButtonSelected(shopButton, menu == shopCanvasGroup);
 		}
 
 		private void HideMenu(CanvasGroup menu)
