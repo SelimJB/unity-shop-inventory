@@ -4,7 +4,7 @@ using MyGame.Item;
 namespace MyGame.Inventory
 {
 	[CreateAssetMenu(fileName = "NewInventory", menuName = "ScriptableObjects/Inventory")]
-	public class Inventory : ScriptableObject
+	public class Inventory : ScriptableObject // TODO : rename InventoryData
 	{
 		[SerializeField] private InventoryItem[] items;
 

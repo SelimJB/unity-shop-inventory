@@ -4,7 +4,7 @@ using UnityEngine;
 namespace MyGame.Shop
 {
 	[CreateAssetMenu(fileName = "NewShop", menuName = "ScriptableObjects/Shop")]
-	public class Shop : ScriptableObject
+	public class Shop : ScriptableObject // TODO : rename ShopData
 	{
 		[SerializeField] private ShopItem[] items;
 
