@@ -406,7 +406,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 10000
-  moneyText: {fileID: 6245994989724488441}
   inventoryItems: {fileID: 11400000, guid: 811815a7028214ba4833dfbac0b9702b, type: 2}
   shopMenu: {fileID: 7372306874337646478}
 --- !u!4 &1949539734
@@ -443,6 +442,7 @@ GameObject:
   - component: {fileID: 6486035325697831079}
   - component: {fileID: 5090174834830955596}
   - component: {fileID: 6486035325697831080}
+  - component: {fileID: 6486035325697831081}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1206,6 +1206,20 @@ MonoBehaviour:
   inventoryCanvasGroup: {fileID: 8748230694634940895}
   shopCanvasGroup: {fileID: 5193570876295742583}
   inventoryMenu: {fileID: 7825701360211751021}
+--- !u!114 &6486035325697831081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441951466781727402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3bb8e96e71c4705a05541e366da623c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 6245994989724488441}
+  playerPurchaseManager: {fileID: 1949539733}
 --- !u!114 &7315695441025649562
 MonoBehaviour:
   m_ObjectHideFlags: 0

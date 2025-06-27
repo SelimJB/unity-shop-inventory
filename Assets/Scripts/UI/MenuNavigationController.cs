@@ -2,7 +2,7 @@ using MyGame.Inventory;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MyGame.Core
+namespace MyGame.UI
 {
 	// TODO: Split controller logic and visual state management into separate components
 	public class MenuNavigationController : MonoBehaviour
@@ -20,9 +20,10 @@ namespace MyGame.Core
 		{
 			inventoryButton.onClick.AddListener(OpenInventory);
 			shopButton.onClick.AddListener(OpenShop);
-			shopButton.Select();
+
 			selectedColor = shopButton.colors.selectedColor;
 			normalColor = shopButton.colors.normalColor;
+			OpenShop();
 		}
 
 		private void OnDestroy()
