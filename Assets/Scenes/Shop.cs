@@ -8,7 +8,7 @@ namespace MyGame.Shop
 	{
 		[SerializeField] private ShopItem[] items;
 
-		public ShopItem[] Items => Items;
+		public ShopItem[] Items => items;
 	}
 
 	[System.Serializable]
