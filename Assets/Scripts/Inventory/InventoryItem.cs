@@ -8,8 +8,14 @@ namespace MyGame.Inventory
 	{
 		[SerializeField] private ItemData itemData;
 		[SerializeField] private int quantity;
-
+		
 		public ItemData ItemData => itemData;
-		public int Quantity => quantity;
+		public int Quantity { get => quantity; set => quantity = value; }
+		
+		public InventoryItem(ItemData itemData, int quantity = 1)
+		{
+			this.itemData = itemData;
+			this.quantity = quantity;
+		}
 	}
 }

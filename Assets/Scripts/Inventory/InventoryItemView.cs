@@ -12,6 +12,8 @@ namespace MyGame.Inventory
 		[SerializeField] private Image itemIcon;
 		[SerializeField] private Button useButton;
 
+		public event System.Action<InventoryItem> OnUseButtonClicked;
+
 		private InventoryItem item;
 
 		public void Initialize(InventoryItem inventoryItem)
@@ -21,7 +23,17 @@ namespace MyGame.Inventory
 			itemDescriptionText.text = item.ItemData.Description;
 			itemQuantityText.text = $"x{item.Quantity}";
 			itemIcon.sprite = item.ItemData.Icon;
-			useButton.onClick.AddListener(() => Debug.Log($"Using item: {item.ItemData.Name}"));
+			useButton.onClick.AddListener(OnButtonClick);
+		}
+
+		private void OnButtonClick()
+		{
+			OnUseButtonClicked?.Invoke(item);
+		}
+
+		private void OnDestroy()
+		{
+			useButton.onClick.RemoveAllListeners();
 		}
 	}
 }
