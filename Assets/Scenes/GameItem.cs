@@ -7,10 +7,10 @@ namespace MyGame.Item
 	{
 		[SerializeField] private string itemName;
 		[SerializeField] private string itemDescription;
-		[SerializeField] private string itemIcon;
+		[SerializeField] private Sprite itemIcon;
 
 		public string Name => itemName;
 		public string Description => itemDescription;
-		public string Icon => itemIcon;
+		public Sprite Icon => itemIcon;
 	}
 }
