@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Shop2
   m_EditorClassIdentifier: 
   items:
-  - item: {fileID: 11400000, guid: 830f0f50077ac4e17afa636c1160be6d, type: 2}
+  - itemData: {fileID: 11400000, guid: 412fe1af2844440da82aeebee3c9b04d, type: 2}
     price: 50
-  - item: {fileID: 11400000, guid: bd568ec859b80425f958dfeaee7866c1, type: 2}
+  - itemData: {fileID: 11400000, guid: 830f0f50077ac4e17afa636c1160be6d, type: 2}
     price: 300
-  - item: {fileID: 11400000, guid: 412fe1af2844440da82aeebee3c9b04d, type: 2}
+  - itemData: {fileID: 11400000, guid: 43e86621194954037a946ff9f2473f01, type: 2}
     price: 400

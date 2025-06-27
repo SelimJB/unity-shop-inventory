@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: Shop1
   m_EditorClassIdentifier: 
   items:
-  - item: {fileID: 11400000, guid: 830f0f50077ac4e17afa636c1160be6d, type: 2}
+  - itemData: {fileID: 11400000, guid: 830f0f50077ac4e17afa636c1160be6d, type: 2}
     price: 100
-  - item: {fileID: 11400000, guid: bd568ec859b80425f958dfeaee7866c1, type: 2}
+  - itemData: {fileID: 11400000, guid: bd568ec859b80425f958dfeaee7866c1, type: 2}
     price: 1000
-  - item: {fileID: 11400000, guid: c641a3e99f1c04a1ea148f58744bd1da, type: 2}
+  - itemData: {fileID: 11400000, guid: c641a3e99f1c04a1ea148f58744bd1da, type: 2}
     price: 50
-  - item: {fileID: 11400000, guid: 065cb6b0cb74c44e89ad50b350f5d3dd, type: 2}
+  - itemData: {fileID: 11400000, guid: 412fe1af2844440da82aeebee3c9b04d, type: 2}
     price: 150
-  - item: {fileID: 11400000, guid: 43e86621194954037a946ff9f2473f01, type: 2}
+  - itemData: {fileID: 11400000, guid: 065cb6b0cb74c44e89ad50b350f5d3dd, type: 2}
     price: 250
-  - item: {fileID: 11400000, guid: 412fe1af2844440da82aeebee3c9b04d, type: 2}
+  - itemData: {fileID: 11400000, guid: 43e86621194954037a946ff9f2473f01, type: 2}
     price: 800
-  - item: {fileID: 11400000, guid: 06e5cf9c7e4e846baa8d7ea91b434e4c, type: 2}
+  - itemData: {fileID: 11400000, guid: 06e5cf9c7e4e846baa8d7ea91b434e4c, type: 2}
     price: 650
-  - item: {fileID: 11400000, guid: 6d4319fd18bf545ff9392f3968e5ef2d, type: 2}
+  - itemData: {fileID: 11400000, guid: 6d4319fd18bf545ff9392f3968e5ef2d, type: 2}
     price: 200
-  - item: {fileID: 11400000, guid: d6c0b673b73fb41dd81eeceddd404ef9, type: 2}
+  - itemData: {fileID: 11400000, guid: d6c0b673b73fb41dd81eeceddd404ef9, type: 2}
     price: 50
-  - item: {fileID: 11400000, guid: bf196fd6ff5f640b5a7fcd558e0f0c3a, type: 2}
+  - itemData: {fileID: 11400000, guid: bf196fd6ff5f640b5a7fcd558e0f0c3a, type: 2}
     price: 200

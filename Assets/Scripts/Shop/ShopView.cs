@@ -5,7 +5,7 @@ namespace Scenes
 {
 	public class ShopView : MonoBehaviour
 	{
-		[SerializeField] private Shop shop;
+		[SerializeField] private ShopData shopData;
 		[SerializeField] private ShopItemView shopItemPrefab;
 		[SerializeField] private Transform itemContainer;
 
@@ -21,7 +21,7 @@ namespace Scenes
 				Destroy(child.gameObject);
 			}
 
-			foreach (var shopItem in shop.Items)
+			foreach (var shopItem in shopData.Items)
 			{
 				if (shopItem == null)
 				{

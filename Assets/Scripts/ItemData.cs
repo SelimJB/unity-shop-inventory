@@ -3,7 +3,7 @@ using UnityEngine;
 namespace MyGame.Item
 {
 	[CreateAssetMenu(fileName = "NewItem", menuName = "ScriptableObjects/Item")]
-	public class GameItem : ScriptableObject // Todo: rename to GameItemData
+	public class ItemData : ScriptableObject
 	{
 		[SerializeField] private string itemName;
 		[SerializeField] private string itemDescription;

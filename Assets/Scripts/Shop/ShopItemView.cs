@@ -17,10 +17,10 @@ namespace MyGame.Shop
 		public void Initialize(ShopItem shopItem)
 		{
 			item = shopItem;
-			itemNameText.text = item.Item.Name;
+			itemNameText.text = item.ItemData.Name;
 			itemPriceText.text = item.Price.ToString("F0", CultureInfo.InvariantCulture) + " $";
-			itemDescriptionText.text = item.Item.Description;
-			itemIcon.sprite = item.Item.Icon;
+			itemDescriptionText.text = item.ItemData.Description;
+			itemIcon.sprite = item.ItemData.Icon;
 		}
 	}
 }
