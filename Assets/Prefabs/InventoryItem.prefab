@@ -520,6 +520,7 @@ MonoBehaviour:
   itemDescriptionText: {fileID: 6938729882805304087}
   itemQuantityText: {fileID: 7141277184625007106}
   itemIcon: {fileID: 1208813362853902398}
+  useButton: {fileID: 2352921636402397810}
 --- !u!1 &8263879673697480058
 GameObject:
   m_ObjectHideFlags: 0

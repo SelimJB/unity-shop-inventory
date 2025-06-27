@@ -96,8 +96,8 @@ MonoBehaviour:
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
-  m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_DecelerationRate: 0.1
+  m_ScrollSensitivity: 3
   m_Viewport: {fileID: 3491029848450314264}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 2875284170860324942}
@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 8560290630024330383}
   - component: {fileID: 7160643213134470329}
   - component: {fileID: 6808955055753726920}
+  - component: {fileID: 5662362783099821646}
   m_Layer: 5
   m_Name: ShopMenu
   m_TagString: Untagged
@@ -259,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.9607843, g: 0.9411765, b: 0.9254902, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -287,9 +288,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 815173ba1554413cbb3d17ef0f7630a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shop: {fileID: 11400000, guid: 27af687187dc84e1f909323720ea5e35, type: 2}
+  shopData: {fileID: 11400000, guid: 27af687187dc84e1f909323720ea5e35, type: 2}
   shopItemPrefab: {fileID: 1347467137020757546, guid: 620df210fce1b46d8bdea5c72ff275b5, type: 3}
   itemContainer: {fileID: 997815586803743518}
+--- !u!225 &5662362783099821646
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3348658664876336705}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4404049668257938069
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +707,14 @@ PrefabInstance:
     - target: {fileID: 3629522371923369406, guid: 620df210fce1b46d8bdea5c72ff275b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954830617193162082, guid: 620df210fce1b46d8bdea5c72ff275b5, type: 3}
+      propertyPath: m_fontSize
+      value: 22.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060629955756008765, guid: 620df210fce1b46d8bdea5c72ff275b5, type: 3}
+      propertyPath: m_fontSize
+      value: 26.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -10,6 +10,7 @@ namespace MyGame.Inventory
 		[SerializeField] private TextMeshProUGUI itemDescriptionText;
 		[SerializeField] private TextMeshProUGUI itemQuantityText;
 		[SerializeField] private Image itemIcon;
+		[SerializeField] private Button useButton;
 
 		private InventoryItem item;
 
@@ -20,6 +21,7 @@ namespace MyGame.Inventory
 			itemDescriptionText.text = item.ItemData.Description;
 			itemQuantityText.text = $"x{item.Quantity}";
 			itemIcon.sprite = item.ItemData.Icon;
+			useButton.onClick.AddListener(() => Debug.Log($"Using item: {item.ItemData.Name}"));
 		}
 	}
 }

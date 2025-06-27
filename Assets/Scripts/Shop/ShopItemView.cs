@@ -11,6 +11,7 @@ namespace MyGame.Shop
 		[SerializeField] private TextMeshProUGUI itemPriceText;
 		[SerializeField] private TextMeshProUGUI itemDescriptionText;
 		[SerializeField] private Image itemIcon;
+		[SerializeField] private Button useButton;
 
 		private ShopItem item;
 
@@ -21,6 +22,7 @@ namespace MyGame.Shop
 			itemPriceText.text = item.Price.ToString("F0", CultureInfo.InvariantCulture) + " $";
 			itemDescriptionText.text = item.ItemData.Description;
 			itemIcon.sprite = item.ItemData.Icon;
+			useButton.onClick.AddListener(() => Debug.Log($"Using item: {item.ItemData.Name}"));
 		}
 	}
 }

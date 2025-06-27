@@ -96,8 +96,8 @@ MonoBehaviour:
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
-  m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_DecelerationRate: 0.1
+  m_ScrollSensitivity: 3
   m_Viewport: {fileID: 643852005559347409}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 8688608078841759331}
@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 4284080552227283562}
   - component: {fileID: 2966151381635769398}
   - component: {fileID: 5144275947057868995}
+  - component: {fileID: 5202293574695363608}
   m_Layer: 5
   m_Name: InventoryMenu
   m_TagString: Untagged
@@ -421,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.9607843, g: 0.9411765, b: 0.9254902, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -452,6 +453,18 @@ MonoBehaviour:
   inventoryItems: {fileID: 11400000, guid: 811815a7028214ba4833dfbac0b9702b, type: 2}
   inventoryItemPrefab: {fileID: 5777077791441753670, guid: a5e4cbe7fffde473e84010a4899455f0, type: 3}
   itemContainer: {fileID: 2843782097002284262}
+--- !u!225 &5202293574695363608
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4756577671309225144}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &7229156974164165007
 GameObject:
   m_ObjectHideFlags: 0
