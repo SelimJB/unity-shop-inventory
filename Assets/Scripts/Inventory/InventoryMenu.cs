@@ -8,6 +8,7 @@ namespace MyGame.Inventory
 		[SerializeField] private InventoryData inventoryItems;
 		[SerializeField] private InventoryItemView inventoryItemPrefab;
 		[SerializeField] private Transform itemContainer;
+		[SerializeField] private CanvasGroup canvasGroup;
 
 		private readonly List<InventoryItemView> itemViews = new();
 
@@ -45,6 +46,13 @@ namespace MyGame.Inventory
 			{
 				itemView.OnUseButtonClicked += onUseButtonClicked;
 			}
+		}
+
+		public void Toggle(bool show)
+		{
+			canvasGroup.alpha = show ? 1f : 0f;
+			canvasGroup.interactable = show;
+			canvasGroup.blocksRaycasts = show;
 		}
 	}
 }

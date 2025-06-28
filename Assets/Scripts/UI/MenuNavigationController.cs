@@ -1,17 +1,16 @@
 using MyGame.Inventory;
+using MyGame.Shop;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace MyGame.UI
 {
-	// TODO: Split controller logic and visual state management into separate components
 	public class MenuNavigationController : MonoBehaviour
 	{
 		[SerializeField] private Button inventoryButton;
 		[SerializeField] private Button shopButton;
-		[SerializeField] private CanvasGroup inventoryCanvasGroup;
-		[SerializeField] private CanvasGroup shopCanvasGroup;
 		[SerializeField] private InventoryMenu inventoryMenu;
+		[SerializeField] private ShopMenu shopMenu;
 
 		private Color selectedColor;
 		private Color normalColor;
@@ -34,29 +33,19 @@ namespace MyGame.UI
 
 		private void OpenInventory()
 		{
-			ShowMenu(inventoryCanvasGroup);
-			HideMenu(shopCanvasGroup);
 			inventoryMenu.RefreshItems();
+			inventoryMenu.Toggle(true);
+			shopMenu.Toggle(false);
+			SetButtonSelected(inventoryButton, true);
+			SetButtonSelected(shopButton, false);
 		}
 
 		private void OpenShop()
 		{
-			ShowMenu(shopCanvasGroup);
-			HideMenu(inventoryCanvasGroup);
-		}
-
-		// TODO: Create MenuView class to handle visual state management
-		private void ShowMenu(CanvasGroup menu)
-		{
-			SetMenuVisibility(menu, true);
-
-			SetButtonSelected(inventoryButton, menu == inventoryCanvasGroup);
-			SetButtonSelected(shopButton, menu == shopCanvasGroup);
-		}
-
-		private void HideMenu(CanvasGroup menu)
-		{
-			SetMenuVisibility(menu, false);
+			shopMenu.Toggle(true);
+			inventoryMenu.Toggle(false);
+			SetButtonSelected(inventoryButton, false);
+			SetButtonSelected(shopButton, true);
 		}
 
 		private void SetButtonSelected(Button button, bool selected)
@@ -64,13 +53,6 @@ namespace MyGame.UI
 			var colors = button.colors;
 			colors.normalColor = selected ? selectedColor : normalColor;
 			button.colors = colors;
-		}
-
-		private void SetMenuVisibility(CanvasGroup menu, bool visible)
-		{
-			menu.alpha = visible ? 1f : 0f;
-			menu.interactable = visible;
-			menu.blocksRaycasts = visible;
 		}
 	}
 }

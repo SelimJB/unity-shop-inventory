@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 1949539734}
   - component: {fileID: 1949539733}
   m_Layer: 0
-  m_Name: PlayerManager
+  m_Name: PlayerPurchaseManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 6486035325697831079}
   - component: {fileID: 5090174834830955596}
   - component: {fileID: 6486035325697831080}
+  - component: {fileID: 6486035325697831082}
   - component: {fileID: 6486035325697831081}
   m_Layer: 5
   m_Name: MainMenu
@@ -1023,11 +1024,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 955669ba5accc469caa40ee820e71c07, type: 3}
---- !u!225 &5193570876295742583 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 5662362783099821646, guid: 955669ba5accc469caa40ee820e71c07, type: 3}
-  m_PrefabInstance: {fileID: 5193570876295742582}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5256729275439950739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1216,9 +1212,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryButton: {fileID: 1683179312796222745}
   shopButton: {fileID: 5647056440610266075}
-  inventoryCanvasGroup: {fileID: 8748230694634940895}
-  shopCanvasGroup: {fileID: 5193570876295742583}
   inventoryMenu: {fileID: 7825701360211751021}
+  shopMenu: {fileID: 7372306874337646478}
 --- !u!114 &6486035325697831081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1245,6 +1240,20 @@ MonoBehaviour:
   floatingTextDuration: 1
   floatingTextDistance: 50
   scaleMultiplier: 1.2
+--- !u!114 &6486035325697831082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441951466781727402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655b953c3e5848ac855dea294ba967ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 6865995078745216807}
+  playerPurchaseManager: {fileID: 1949539733}
 --- !u!114 &6865995078745216807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1619,27 +1628,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3258490467680140267, guid: 0a47af065110d4ba38bd41f0f9eb1d50, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3258490467680140267, guid: 0a47af065110d4ba38bd41f0f9eb1d50, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3258490467680140267, guid: 0a47af065110d4ba38bd41f0f9eb1d50, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3258490467680140267, guid: 0a47af065110d4ba38bd41f0f9eb1d50, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 178
       objectReference: {fileID: 0}
     - target: {fileID: 3258490467680140267, guid: 0a47af065110d4ba38bd41f0f9eb1d50, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 3258490467680140267, guid: 0a47af065110d4ba38bd41f0f9eb1d50, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -89
       objectReference: {fileID: 0}
     - target: {fileID: 4756577671309225144, guid: 0a47af065110d4ba38bd41f0f9eb1d50, type: 3}
       propertyPath: m_Name
@@ -1650,11 +1659,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a47af065110d4ba38bd41f0f9eb1d50, type: 3}
---- !u!225 &8748230694634940895 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 5202293574695363608, guid: 0a47af065110d4ba38bd41f0f9eb1d50, type: 3}
-  m_PrefabInstance: {fileID: 8748230694634940894}
-  m_PrefabAsset: {fileID: 0}
 --- !u!222 &8780934008425798301
 CanvasRenderer:
   m_ObjectHideFlags: 0

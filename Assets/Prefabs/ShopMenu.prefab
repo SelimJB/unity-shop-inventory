@@ -291,6 +291,7 @@ MonoBehaviour:
   shopData: {fileID: 11400000, guid: 27af687187dc84e1f909323720ea5e35, type: 2}
   shopItemPrefab: {fileID: 1347467137020757546, guid: 620df210fce1b46d8bdea5c72ff275b5, type: 3}
   itemContainer: {fileID: 997815586803743518}
+  canvasGroup: {fileID: 5662362783099821646}
 --- !u!225 &5662362783099821646
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -598,7 +599,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 150, y: 180}
+  m_CellSize: {x: 150, y: 178}
   m_Spacing: {x: 14, y: 14}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -710,11 +711,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4954830617193162082, guid: 620df210fce1b46d8bdea5c72ff275b5, type: 3}
       propertyPath: m_fontSize
-      value: 20.9
+      value: 20.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8662623038867606421, guid: 620df210fce1b46d8bdea5c72ff275b5, type: 3}
+      propertyPath: m_fontSize
+      value: 16.05
       objectReference: {fileID: 0}
     - target: {fileID: 9060629955756008765, guid: 620df210fce1b46d8bdea5c72ff275b5, type: 3}
       propertyPath: m_fontSize
-      value: 24.8
+      value: 24.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

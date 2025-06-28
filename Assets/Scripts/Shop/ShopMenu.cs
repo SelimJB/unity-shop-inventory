@@ -1,14 +1,14 @@
 using System.Collections.Generic;
-using MyGame.Shop;
 using UnityEngine;
 
-namespace Scenes
+namespace MyGame.Shop
 {
 	public class ShopMenu : MonoBehaviour
 	{
 		[SerializeField] private ShopData shopData;
 		[SerializeField] private ShopItemView shopItemPrefab;
 		[SerializeField] private Transform itemContainer;
+		[SerializeField] private CanvasGroup canvasGroup;
 
 		private readonly List<ShopItemView> itemViews = new();
 
@@ -46,6 +46,13 @@ namespace Scenes
 			{
 				itemView.OnUseButtonClicked += onUseButtonClicked;
 			}
+		}
+		
+		public void Toggle(bool show)
+		{
+			canvasGroup.alpha = show ? 1f : 0f;
+			canvasGroup.interactable = show;
+			canvasGroup.blocksRaycasts = show;
 		}
 	}
 }

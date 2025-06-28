@@ -1,7 +1,6 @@
 using System;
 using MyGame.Inventory;
 using MyGame.Shop;
-using Scenes;
 using UnityEngine;
 
 namespace MyGame.Core
