@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 namespace MyGame.UI
 {
+	// TODO: separate money display from feedbacks
 	public class MoneyDisplayController : MonoBehaviour
 	{
 		[SerializeField] private TextMeshProUGUI moneyText;
@@ -21,6 +22,13 @@ namespace MyGame.UI
 		[SerializeField] private Ease fadeOutEase = Ease.InQuad;
 		[SerializeField] private float shakeStrength = 1f;
 		[SerializeField] private int shakeVibrato = 10;
+
+		[Header("Purchase Feedback")]
+		[SerializeField] private TextMeshProUGUI spendingTextPrefab;
+		[SerializeField] private Transform spendingTextParent;
+		[SerializeField] private float floatingTextDuration = 1f;
+		[SerializeField] private float floatingTextDistance = 50f;
+		[SerializeField] private float scaleMultiplier = 1.2f;
 
 		private Sequence currentFlashSequence;
 		private Vector3 textInitialPosition;
@@ -43,6 +51,7 @@ namespace MyGame.UI
 		private void OnItemPurchased(float price)
 		{
 			UpdateMoneyText();
+			ShowSpendingText(price);
 		}
 
 		private void OnPurchaseFailed()
@@ -77,6 +86,38 @@ namespace MyGame.UI
 			moneyText.transform
 				.DOPunchScale(Vector3.one * 0.2f, flashDuration, 1, 0.5f)
 				.SetEase(Ease.OutQuad);
+		}
+
+		private void ShowSpendingText(float amount)
+		{
+			var spendingText = Instantiate(spendingTextPrefab, spendingTextParent);
+			spendingText.text = $"-{amount:F0}$";
+
+			Sequence sequence = DOTween.Sequence();
+
+			spendingText.transform.localScale = Vector3.zero;
+			spendingText.alpha = 0f;
+
+			sequence.Append(spendingText.transform
+				.DOScale(Vector3.one * scaleMultiplier, floatingTextDuration * 0.2f)
+				.SetEase(Ease.OutBack));
+
+			sequence.Join(spendingText.DOFade(1f, floatingTextDuration * 0.2f));
+
+			sequence.Append(spendingText.transform
+				.DOScale(Vector3.one, floatingTextDuration * 0.1f));
+
+			sequence.Join(spendingText.transform
+				.DOLocalMoveY(spendingText.transform.localPosition.y + floatingTextDistance, floatingTextDuration)
+				.SetEase(Ease.OutQuad));
+
+			sequence.Join(spendingText.transform
+				.DOLocalRotate(new Vector3(0, 0, 10f), floatingTextDuration)
+				.SetEase(Ease.InQuad));
+
+			sequence.Append(spendingText.DOFade(0f, floatingTextDuration * 0.3f));
+
+			sequence.OnComplete(() => { Destroy(spendingText.gameObject); });
 		}
 
 		private void UpdateMoneyText()
