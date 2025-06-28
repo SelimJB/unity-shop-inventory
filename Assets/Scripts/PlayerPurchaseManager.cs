@@ -3,7 +3,7 @@ using MyGame.Inventory;
 using MyGame.Shop;
 using UnityEngine;
 
-namespace MyGame.Core
+namespace MyGame.Example
 {
 	public class PlayerPurchaseManager : MonoBehaviour
 	{
