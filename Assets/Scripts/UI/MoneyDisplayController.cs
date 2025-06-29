@@ -1,4 +1,4 @@
-using MyGame.Core;
+using MyGame.Example;
 using TMPro;
 using UnityEngine;
 
